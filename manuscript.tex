@@ -115,7 +115,7 @@
 \begin{abstract}
 %% Text of abstract
 A connection of the Wigner--Yanase skew information and multiple quantum (MQ) NMR coherences is considered at different temperatures and evolution times of nuclear spins with the dipole-dipole interactions in MQ NMR experiments in solids.
-It is shown that the Wigner--Yanase skew information at temperature is equal to the doubled second moment of the MQ NMR spectra at the temperature twice large and any evolution times.
+It is shown that the Wigner--Yanase skew information at temperature $T$ is equal to the doubled second moment of the MQ NMR spectra at the temperature twice large and any evolution times.
 A comparison of the many--spin entanglement obtained with the Wigner--Yanase information and the Fisher information is conducted.
 \end{abstract}
 
@@ -154,11 +154,11 @@ Further investigations of the many--particle entanglement require a development 
 In particular, it was shown~\cite{6,8} that a low bound on the quantum Fisher information~\cite{4,5} coincides with the double second moment of the spectrum of multiple quantum (MQ) coherences.
 As a result, the low bound on the quantum Fisher information can be found in MQ NMR experiments~\cite{9},
 in cold--atom experiments, including Bose--Einstein condensates, ultracold atoms in cavities, and trapped ions~\cite{10,11,12,13,14}.
-Using the properties of the quantum Fisher Information one can obtain a number of entangled particles (spins) in the system under consideration~\cite{6} and even to find the dependence of a number of entangled spins on temperature~\cite{8}.
+Using the properties of the quantum Fisher information one can obtain a number of entangled particles (spins) in the system under consideration~\cite{6} and even to find the dependence of a number of entangled spins on temperature~\cite{8}.
 
 
 The Wigner--Yanase skew information~\cite{1,2,3} is also connected with the spectrum of MQ coherences.
-In particular, we demonstrate in the present article that the Wigner--Yanase skew information in a spin system $(S = 1/2)$ with the dipole--dipole interactions (DDI) in MQ NMR experiment~\cite{9} at the system temperature $T$ equals to the double second moment of the MQ NMR spectrum obtained at temperature $2T$.
+In particular, we demonstrate in the present article that the Wigner--Yanase skew information in a spin system $(s = 1/2)$ with the dipole--dipole interactions (DDI) in MQ NMR experiment~\cite{9} at the system temperature $T$ equals to the double second moment of the MQ NMR spectrum obtained at temperature $2T$.
 Using the properties of the Wigner--Yanase skew information one can investigate the many--spin entanglement on the basis of the MQ NMR spectroscopy~\cite{9}.
 
 
@@ -184,7 +184,8 @@ We briefly discuss our results in the concluding Sec.~\ref{sec:5}.
 \end{figure}
 
 MQ NMR methods are widely used for solving problems of quantum informatics~\cite{16,17}. The MQ NMR experiment consists of four distinct periods of time Fig.~(\ref{fig:1}): preparation $(\tau)$, evolution $(t_1)$, mixing $(\tau)$, and detection $(t_2)$~\cite{9}.
-MQ NMR coherences are created by a periodic multipulse sequence, consisting of $I_x$-pulses, irradiating the system of the preparation period~\cite{9}.
+MQ NMR coherences are created by a periodic multipulse sequence, consisting of
+$\pm$-pulses, irradiating the system of the preparation period~\cite{9}.
 If the inverse period of the multipulse sequence significantly exceeds the local dipolar field (in frequency units)~\cite{18}
 MQ NMR dynamics can be described by the averaged nonsecular two--spin/two--quantum Hamiltonian~$H_{MQ}$
 %
@@ -209,7 +210,7 @@ with the initial thermodynamic equilibrium density matrix
     \label{eq:3}
         \rho(0) = \rho_\mathrm{eq} = \frac{\exp(\frac{\hbar \omega_0}{kT}I_z)}{Z},
 \end{equation}
-where $Z=Tr \left\{e\frac{\hbar \omega_0}{kT}I_z \right\}$ is the partition function, $\hbar$ and $k$ are the Pauli and Boltzmann constants, $\omega_0$ is the Larmor frequency, $T$ is the temperature, and $I_z$ is the operator of the projection of the total spin angular momentum on the $z$-axis, which is directed along the strong external magnetic field.
+where $Z=Tr \left\{exp\left(\frac{\hbar \omega_0}{kT}I_z\right) \right\}$ is the partition function, $\hbar$ and $k$ are the Pauli and Boltzmann constants, $\omega_0$ is the Larmor frequency, $T$ is the temperature, and $I_z$ is the operator of the projection of the total spin angular momentum on the $z$-axis, which is directed along the strong external magnetic field.
 
 
 Following the preparation evolution and mixing periods of the MQ NMR experiments and taking into account the phase increment $\phi$ of the radio-frequency pulses~\cite{9}, the resulting signal $G(\tau,\phi)$ stored as population information is
@@ -317,7 +318,7 @@ Now we use te evident relationship:
             \sqrt{V^+(\tau)\frac{e^{\beta I_z}}{Z}V(\tau)} =
                 V^+(\tau) \frac{e^{\frac{\beta}{2}}I_z}{\sqrt{Z}}V(\tau).
 \end{equation}
-it can be proved by simple calculation:
+It can be proved by simple calculation:
 \begin{equation}
     \label{eq:18}
         \sqrt{\rho}\sqrt{\rho} =
@@ -341,7 +342,7 @@ and
 	Tr\left[I_z,\sqrt{\rho(\tau,\beta)} \right]^2
 	= Tr\left\{\sum_{k,k'}kk'
 		\rho_k\left(\tau,\frac{\beta}{2}\right)
-		\rho_k\left(\tau,\frac{\beta}{2}\right)
+		\rho_k'\left(\tau,\frac{\beta}{2}\right)
 	\right\}
 	= \sum_k k^2 J_k\left(\tau,\frac{\beta}{2}\right).
 \end{equation}
@@ -355,11 +356,11 @@ Finally, one can obtain that
 \end{equation}
 %
 Thus, we obtain the important assertion.
-If the spin system is investigated with MQ NMR at temperature $T\sim\beta^{-1}$ then the Wigner--Yanase skew information equals to the doubled second momentum of the distribution of the intensities of the MQ NMR coherences at temperature $2T \sim 2\beta^{-1}$ at any moment of the spin evolution.
+If the spin system is investigated with MQ NMR at temperature $T\sim\beta^{-1}$ then the Wigner--Yanase skew information equals to the double second momentum of the distribution of the intensities of the MQ NMR coherences at temperature $2T \sim 2\beta^{-1}$ at any moment of the spin evolution.
 
 
 The Wagner-Yanase skew information is connected with the second moment of the distribution of the MQ NMR coherences analogously to the Fisher information.
-We compare these information the following Section~\ref{sec:4}.
+We compare these informations the following Section~\ref{sec:4}.
 
 
 \section{A comparison of the many-spin entanglement obtained with the Wigner--Yanase information and the Fisher information}
@@ -370,7 +371,7 @@ We compare these information the following Section~\ref{sec:4}.
 	\caption{
 		The dependence of the number of the entangled spins on the inverse temperature $\beta = \frac{\pi \omega_0}{kT}$;
 		black circles - the results are obtained with the Fisher information;
-		open circles - results are obtained with the Wigner--Yanase information.
+		open circles - the results are obtained with the Wigner--Yanase information.
 	}
 	\label{fig:2}
 \end{figure}
@@ -384,8 +385,8 @@ The informations are connected by the following restriction~\cite{3}
     \leq 2I_{WY}\left(\rho(\tau,\beta), I_z\right).
 \end{equation}
 %
-The restrictions (22) allow us to hope that the obtained results of the number of entangled spins are not strong by different.
 For the comparison we used the model~\cite{21} of a nonspherical nanopore filled with a gas of spin-carrying atoms (for example, xenon) or molecules in a strong external magnetic field.
+The restrictions (22) allow us to hope that the obtained results of the number of entangled spins are not strongly different.
 This model allows to investigate the many-spin entanglement in the spin system consisting of hundreds of nuclear spins~\cite{7}.
 
 
