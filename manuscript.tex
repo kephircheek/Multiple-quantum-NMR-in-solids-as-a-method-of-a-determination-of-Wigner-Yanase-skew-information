@@ -162,7 +162,7 @@ In particular, it was shown~\cite{7,9} that a lower bound on the quantum Fisher 
 As a result, the lower bound on the quantum Fisher information can be found in MQ~NMR experiments~\cite{10},
 in cold--atom experiments, including Bose--Einstein condensates, ultracold atoms in cavities, and trapped ions~\cite{11,12,13,14,15}.
 Using the properties of the quantum Fisher information one can obtain the number of entangled particles (spins) in the system under consideration~\cite{7}
-and even to find the dependence of the number of entangled spins on temperature~\cite{9}.
+and even find the dependence of the number of entangled spins on temperature~\cite{9}.
 
 
 The Wigner--Yanase skew information~\cite{1,2,3,4} is also connected with the spectrum of MQ coherences.
@@ -175,9 +175,9 @@ We also compare on the simple models~\cite{8,16} the many--spin entanglement obt
 
 
 The article is organized as follows.
-In Sec.~\ref{sec:2} the short introduction to the MQ NMR spectroscopy is given.
+In Sec.~\ref{sec:2} a short introduction to the MQ NMR spectroscopy is given.
 The connection of the Wigner--Yanase skew information with the second moment of the MQ NMR spectrum is obtained in Sec.~\ref{sec:3}.
-A comparison of the many--spin entanglement obtained with Wigner--Yanase information and the Fisher information on the simple models~\cite{8,16} is conducted in Sec.~\ref{sec:4}.
+A comparison of the many--spin entanglement obtained with the Wigner--Yanase and the Fisher information on the simple models~\cite{8,16} is conducted in Sec.~\ref{sec:4}.
 We briefly discuss our results in the concluding Sec.~\ref{sec:5}.
 
 
@@ -191,7 +191,9 @@ We briefly discuss our results in the concluding Sec.~\ref{sec:5}.
 	\label{fig:1}
 \end{figure}
 
-MQ NMR methods are widely used for solving problems of quantum informatics~\cite{17,18}. The MQ NMR experiment consists of four distinct periods of time Fig.~(\ref{fig:1}): preparation $(\tau)$, evolution $(t_1)$, mixing $(\tau)$, and detection $(t_2)$~\cite{10}.
+MQ NMR methods are widely used for solving problems of quantum informatics~\cite{17,18}.
+The MQ NMR experiment consists of four distinct periods of time as depicted in Fig.~\ref{fig:1}:
+preparation $(\tau)$, evolution $(t_1)$, mixing $(\tau)$, and detection $(t_2)$~\cite{10}.
 MQ NMR coherences are created by a periodic multipulse sequence, consisting of
 $\pm$x-pulses, irradiating the system of the preparation period~\cite{10}.
 If the inverse period of the multipulse sequence significantly exceeds the local dipolar field (in frequency units)~\cite{19}
@@ -219,7 +221,12 @@ with the initial thermodynamic equilibrium density matrix
     \label{eq:3}
         \rho(0) = \rho_\mathrm{eq} = \frac{\exp(\frac{\hbar \omega_0}{kT}I_z)}{Z},
 \end{equation}
-where $Z=Tr \left\{exp\left(\frac{\hbar \omega_0}{kT}I_z\right) \right\}$ is the partition function, $\hbar$ and $k$ are the Pauli and Boltzmann constants, $\omega_0$ is the Larmor frequency, $T$ is the temperature, and $I_z$ is the operator of the projection of the total spin angular momentum on the $z$-axis, which is directed along the strong external magnetic field.
+where $Z=Tr \left\{exp\left(\frac{\hbar \omega_0}{kT}I_z\right) \right\}$ is the partition function,
+$\hbar$ and $k$ are the Plank and Boltzmann constants respectively,
+$\omega_0$ is the Larmor frequency,
+$T$ is the temperature,
+and $I_z$ is the operator of the projection of the total spin angular momentum on the $z$-axis,
+which is directed along the strong external magnetic field.
 
 
 Following the preparation evolution and mixing periods of the MQ NMR experiments and taking into account the phase increment $\phi$ of the radio-frequency pulses~\cite{10}, the resulting signal $G(\tau,\phi)$ stored as population information is
@@ -249,12 +256,12 @@ is the density matrix at the end of the preparation period,
 which can be defined from~Eqs.~(\ref{eq:2},\ref{eq:3}) and $\beta = \frac{\hbar \omega_0}{kT}$.
 
 
-It is convenient to expand the density matrix $\rho_\mathrm{pre}(\tau)$ in series as~\cite{21}
+It is convenient to expand the density matrix $\rho_\mathrm{pre}(\tau, \beta)$ in series as~\cite{21}
 \begin{equation}
     \label{eq:6}
         \rho_\mathrm{pre}(\tau,\beta) = \sum_n \rho_{\mathrm{pre},n}(\tau,\beta),
 \end{equation}
-where $\rho_\mathrm{pre}(\tau,\beta)$ is the contribution to the density matrix $\rho_\mathrm{pre}(\tau,\beta)$ from the MQ coherence of the n--th order.
+where $\rho_{\mathrm{pre}, n}(\tau,\beta)$ is the contribution to the density matrix $\rho_\mathrm{pre}(\tau,\beta)$ from the MQ coherence of the n--th order.
 Then the resulting signal $G(\tau,\phi)$ of the MQ NMR~\cite{10} can be rewritten as
 \begin{equation} \label{eq:7}
     G(\tau, \phi) = \sum_n e^{in\phi}
@@ -276,8 +283,9 @@ The normalized intensities of the MQ NMR coherences can be determined as follows
 As was shown in~\cite{8},
 \begin{equation}
     \label{eq:10}
-        Tr(\rho_\mathrm{eq}^2) = \frac{2^N ch^N (\beta)}{Z^2}
+        Tr(\rho_\mathrm{eq}^2) = \frac{2^N ch^N (\beta)}{Z^2},
 \end{equation}
+where $N$ is the number of spins.
 It was also shown that
 \begin{equation}
     \label{eq:11}
@@ -302,7 +310,7 @@ and can be useful for an investigation of the many-spin entanglement.
 
 \section{The Wigner--Yanase skew information and MQ NMR}
 \label{sec:3}
-According definition~\cite{1,2,3} the Wigner--Yanase skew information
+The Wigner--Yanase skew information is defined as~\cite{1,2,3}
 \begin{equation}
     \label{eq:14}
         I_{WY}(\rho(\tau,\beta),I_z) = -\frac{1}{2}
@@ -325,15 +333,15 @@ Now we use the evident relationship:
     \label{eq:17}
         \sqrt{\rho(\tau,\beta)} =
             \sqrt{V^+(\tau)\frac{e^{\beta I_z}}{Z}V(\tau)} =
-                V^+(\tau) \frac{e^{\frac{\beta}{2}}I_z}{\sqrt{Z}}V(\tau).
+                V^+(\tau) \frac{e^{\frac{\beta}{2}I_z}}{\sqrt{Z}}V(\tau).
 \end{equation}
 It can be proved by simple calculation:
 \begin{equation}
     \label{eq:18}
         \sqrt{\rho}\sqrt{\rho} =
-            V^+(\tau)\frac{e^\frac{\beta}{2}I_z}{\sqrt{Z}}
-                V(\tau)V^+(\tau)\frac{e^{\frac{\beta}{2}}I_z}{\sqrt{Z}}V(\tau) =
-            V^+(\tau)\frac{e^\beta I_z}{Z}V(\tau) =
+						V^+(\tau)\frac{e^{\frac{\beta}{2}I_z}}{\sqrt{Z}}
+                V(\tau)V^+(\tau)\frac{e^{\frac{\beta}{2}I_z}}{\sqrt{Z}}V(\tau) =
+						V^+(\tau)\frac{e^{\beta I_z}}{Z}V(\tau) =
         \rho(\tau,\beta)
 \end{equation}
 %
@@ -410,8 +418,8 @@ This model allows to investigate the many-spin entanglement in the spin system c
 We investigated the many-spin entanglement in the spin system, consisting of 201 spins, in a nanopore both with
 the Wigner--Yanase information $I_{WY}\left(\rho(\tau, \beta), I_z\right)$
 and the Fisher information $I_F\left(\rho(\tau,\beta),I_z\right)$.
-In Fig.~(\ref{fig:2}) the dependence of the number of entangled spins on the inverse temperature is presented.
-Fig.~(\ref{fig:2}) demonstrates that the number of the entangled spins increases when the temperature decreases both for the Wigner--Yanase information and the Fisher information.
+In Fig.~\ref{fig:2} the dependence of the number of entangled spins on the inverse temperature is presented.
+Fig.~\ref{fig:2} demonstrates that the number of the entangled spins increases when the temperature decreases both for the Wigner--Yanase information and the Fisher information.
 
 
 The analogous investigation was conducted on the model of the proton zigzag chain in a single crystal of hambergite~\cite{16,24}.
