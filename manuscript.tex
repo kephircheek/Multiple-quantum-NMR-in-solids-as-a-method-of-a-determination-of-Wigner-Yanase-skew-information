@@ -56,6 +56,10 @@
 
 % \journal{Physics Letters A}
 
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+
 \begin{document}
 
 \begin{frontmatter}
@@ -85,7 +89,7 @@
 %%             country={}}
 %% \fntext[label3]{}
 
-\title{Multiple quantum NMR in solids as a method of determination of Wigner--Yanase skew information}
+\title{Многоквантовый ЯМР в твердых телах как метод определения информации Вигнера--Янасе}
 
 %% use optional labels to link authors explicitly to addresses:
 %% \author[label1,label2]{}
@@ -106,17 +110,17 @@
 
 
 
-\author[icp]{S.~I.~Doronin}
-\author[icp]{E.~B.~Fel'dman}
-\author[icp,msu]{I.~D.~Lazarev}
-\address[icp]{Institute of Problems of Chemical Physics of Russian Academy of Sciences, \\ Chernogolovka, Moscow Region, Russia 142432}
-\address[msu]{Faculty of Fundamental Physical-Chemical Engineering, Lomonosov Moscow State University, GSP-1, Moscow, Russia 119991}
+\author[icp]{C.~И.~Доронин}
+\author[icp]{Э.~Б.~Фельдман}
+\author[icp,msu]{И.~Д.~Лазарев}
+\address[icp]{Институт проблем химической физики Российской Академии Наук, \\ Черноголовка, Москва, Россия 142432} 
+\address[msu]{Факультет фундаментальной физико-химической инженерии. МГУ им. Ломоносова, GSP-1, Москва. Россия 119991}
 
 \begin{abstract}
 %% Text of abstract
-A connection of the Wigner--Yanase skew information and multiple quantum (MQ) NMR coherences is considered at different temperatures and evolution times of nuclear spins with dipole-dipole interactions in MQ NMR experiments in solids.
-It is shown that the Wigner--Yanase skew information at temperature $T$ is equal to the double second moment of the MQ NMR spectrum at the double temperature for any evolution times.
-A comparison of the many--spin entanglement obtained with the Wigner--Yanase information and the Fisher information is conducted.
+В многоквантовом эксперименте  (МК) ЯМР в твердых телах рассматривается связь косой информации Вигнера--Янасе и  МК когерентностей ЯМР при разных температурах и временах эволюции ядерных спинов с диполь-дипольными взаимодействиями.
+Показано, что косая информация Вигнера--Янасе при температуре $T$ равна удвоенному второму моменту  спектра МК когерентностей ЯМР  при температуре $2T$ для любых времен эволюции.
+Проводится сравнение оценок многочастичной запутанности, полученной с помощью косой информации Вигнера--Янасе и информации Фишера.
 \end{abstract}
 
 %%Graphical abstract
@@ -133,13 +137,14 @@ A comparison of the many--spin entanglement obtained with the Wigner--Yanase inf
 
 \begin{keyword}
 %% keywords here, in the form: keyword \sep keyword
-	many-spin entanglement \sep
-	Fisher information \sep
-	Wigner-Yanase skew information \sep
-	multiple quantum NMR \sep
-	multiple quantum coherences \sep
-	second moment \sep
-	temperature
+    многочастичная запутанность \sep
+    информация Фишера \sep
+    косая информация Фишера \sep
+    многоквантовый ЯМР \sep
+    многоквантовые когерентности \sep
+    второй момент \sep
+    температура
+    
 %% PACS codes here, in the form: \PACS code \sep code
 %\PACS 0000 \sep 1111
 %%
@@ -156,80 +161,78 @@ A comparison of the many--spin entanglement obtained with the Wigner--Yanase inf
 
 \section{Introduction}
 \label{sec:1}
-The Wigner--Yanase skew information~\cite{1,2,3,4} together with the Fisher information~\cite{5,6} allow the development of powerful methods for the investigation of entanglement, including many--particle entanglement~\cite{7,8}.
-Further investigations of many--particle entanglement require the development of corresponding experimental methods.
-In particular, it was shown~\cite{7,9} that a lower bound on the quantum Fisher information~\cite{5,6} coincides with the double second moment of the spectrum of multiple quantum (MQ) coherences.
-As a result, the lower bound on the quantum Fisher information can be found in MQ~NMR experiments~\cite{10},
-in cold--atom experiments, including experiments with Bose--Einstein condensates, ultracold atoms in cavities, and trapped ions~\cite{11,12,13,14,15}.
-Using the properties of the quantum Fisher information one can obtain the number of the entangled particles (spins) in the system under consideration~\cite{7}
-and even find the dependence of the number of the entangled spins on the temperature~\cite{9}.
+Косая информация Вигнера--Янасе~\cite{1,2,3,4} так же, как и информация Фишера~\cite{5,6} позволяет разрабатывать методы для исследования многочастичной запутанности~\cite{7,8}. 
+Дальнейшее исследование многочастичной запутанности требует разработки соответствующих экспериментальных методов.
+В частности, было показано~\cite{7,9}, что нижняя граница квантовой информации Фишера~\cite{5,6} совпадает со вторым моментом спектра многоквантовых (МК) когерентностей. 
+В результате нижняя граница квантовой информации Фишера может быть найдена в МК эксперименте ЯМР~\cite{10},
+в экспериментах с холодными атомами, включая эксперименты с Бозе-Эйнштейновскими конденсатами, ионами в ловушках и др.~\cite{11,12,13,14,15}. 
+Используя свойства квантовой информации Фишера можно получить оценку снизу для числа запутанных частиц (спинов) в рассматриваемой системе~\cite{7} и даже найти зависимость этой оценки от температуры~\cite{9}. 
 
 
-The Wigner--Yanase skew information~\cite{1,2,3,4} is also connected with the spectrum of MQ coherences.
-In particular, we demonstrate in the present article that the Wigner--Yanase skew information in a spin system $(s = 1/2)$ with the dipole--dipole interactions (DDI) in the MQ NMR experiment~\cite{10} at the system temperature $T$ equals the double second moment of the MQ NMR spectrum obtained at the temperature $2T$.
-Using the properties of the Wigner--Yanase skew information one can investigate many--spin entanglement on the basis of the MQ NMR spectroscopy~\cite{10}.
+Косая информация Вигнера-Янасе~\cite{1,2,3,4} также связана со спектром МК когерентностей. 
+В частности в данной работе мы демонстрируем, 
+что косая информация Вигнера--Янасе в системе спинов $(s = 1/2)$ c диполь-дипольным взаимодействием (ДДВ) в МК эксперименте ЯМР~\cite{10} с температурой системы $T$ 
+равна второму моменту спектра МК когерентностей ЯМР полученном при температуре $2T$. 
+Используя это свойство косой информации Вигнера--Янасе можно исследовать многочастичную запутанность на базе МК спектроскопии ЯМР~\cite{10}.
 
 
-The main aim of the present article is the development of a method of extracting the Wigner--Yanase skew information from the MQ NMR spectra.
-We also compare on the simple models~\cite{8,16} the many--spin entanglement obtained both with the Wigner--Yanase information and the Fisher information.
+Главная цель данной работы это разработка метода извлечения косой информации Вигнера--Янасе из спектра МК когерентностей ЯМР. 
+Мы также провели сравнение оценок многочастичной запутанности, полученных с помощью косой информации Вигнера--Янасе и информации Фишера для простой модели~\cite{8,16}.  
 
 
-The article is organized as follows.
-In Sec.~\ref{sec:2} a short introduction to the MQ NMR spectroscopy is given.
-The connection of the Wigner--Yanase skew information with the second moment of the MQ NMR spectrum is obtained in Sec.~\ref{sec:3}.
-A comparison of many--spin entanglement obtained with the Wigner--Yanase and the Fisher information on simple models~\cite{8,16} is conducted in Sec.~\ref{sec:4}.
-We briefly discuss our results in concluding Sec.~\ref{sec:5}.
 
-
-\section{MQ NMR for solving problems of quantum informatics}
+\section{МК ЯМР для решения проблем квантовой информатики}
 \label{sec:2}
 
 
 \begin{figure}
 	\includegraphics[width=0.95\linewidth]{mq-experiment}
-	\caption{The basic scheme of the multiple quantum NMR experiment.}
+	\caption{Схема многоквантового эксперимента ЯМР.}
 	\label{fig:1}
 \end{figure}
 
-MQ NMR methods are widely used for solving problems of quantum informatics~\cite{17,18}.
-The MQ NMR experiment consists of four distinct periods of time as depicted in Fig.~\ref{fig:1}:
-preparation $(\tau)$, evolution $(t_1)$, mixing $(\tau)$, and detection $(t_2)$~\cite{10}.
-MQ NMR coherences are created by a periodic multipulse sequence, consisting of
-$\pm$x-pulses, irradiating the system of the preparation period~\cite{10}.
-If the inverse period of the multipulse sequence significantly exceeds the local dipolar field (in frequency units)~\cite{19} then
-MQ NMR dynamics can be described by the averaged nonsecular two--spin/two--quantum Hamiltonian~$H_{MQ}$~\cite{20}
+Методы МК ЯМР широко используются для решения проблем квантовой информатики~\cite{17,18}. 
+МК эксперимент ЯМР состоит из четырех уникальных периодов времени, изображенных на рисунке Рис.~\ref{fig:1}:
+подготовительный период $(\tau)$, период свободной эволюции $(t_1)$, период смешивания $(\tau)$ и период детектирования $(t_2)$~\cite{10}.
+МК когерентности ЯМР создаются периодической многоимпульсной последовательностью, 
+состоящей из $\pm$x-импульсов, которой облучают систему на подготовительном периоде~\cite{10}.
+Если период обращенной многоимпульсной последовательности значительно превышает локальное дипольное поле (в частотных единицах)~\cite{19}, 
+тогда МК динамика ЯМР может быть описана усредненным несекулярным двухквантовым Гамильтонианом~$H_{MQ}$~\cite{20}. 
 %
 \begin{equation} \label{eq:1}
         H_{MQ} = H^{(+2)} + H^{(-2)} , \quad
         H^{(\pm 2)} = -\frac{1}{2} \sum_{j<k} D_{jk} I_{j} ^\pm I_k^\pm,
 \end{equation}
 %
-where $D_{jk}$ is the coupling constant between spins $j$ and $k$,
-and $I_{j}^+, I_k ^-$ are the raising and lowering operators of spin $j$.
-On the mixing period, the spin system is irradiated by the multiple pulse sequence with $\pm y$--pulses.
-As a result, the averaged nonsecular two-spin/two quantum Hamiltonian on the mixing period equals $(-H_{MQ})$~\cite{10}.
+где $D_{jk}$ это константа диполь-дипольного взаимодействия между спинами $j$ и $k$,
+а $I_{j}^+, I_k ^-$ это повышающий и понижающий операторы для спина $j$.
+На периоде смешивания спиновая система облучается многоимпульсной последовательностью $\pm y$--импульсами. 
+В результате средний несекулярный двухквантовый Гамильтониан  на периоде смешивания равен~$(-H_{MQ})$~\cite{10}.
 
 
-In order to investigate the MQ NMR dynamics of the system on the preparation period~\cite{10} one should find the density matrix $\rho(t)$ by solving the Liouville evolution equation~\cite{19}
+В частности, для исследования МК динамики ЯМР для системы на подготовительном периоде~\cite{10} 
+следует найти матрицу плотности $\rho(t)$, решив эволюционное уравнение Лиувилля~\cite{19}. 
 
 \begin{equation}
     \label{eq:2}
         i\frac{d\rho(t)}{dt} = [H_{MQ}, \rho(t)]
 \end{equation}
-with the initial thermodynamic equilibrium density matrix
+С начальным термодинамически равновесным состоянием
 \begin{equation}
     \label{eq:3}
         \rho(0) = \rho_\mathrm{eq} = \frac{\exp(\frac{\hbar \omega_0}{kT}I_z)}{Z},
 \end{equation}
-where $Z=Tr \left\{exp\left(\frac{\hbar \omega_0}{kT}I_z\right) \right\}$ is the partition function,
-$\hbar$ and $k$ are the Plank and Boltzmann constants, respectively,
-$\omega_0$ is the Larmor frequency,
-$T$ is the temperature,
-and $I_z$ is the operator of the projection of the total spin angular momentum on the $z$-axis,
-which is directed along the strong external magnetic field.
+где $Z=Tr \left\{exp\left(\frac{\hbar \omega_0}{kT}I_z\right) \right\}$ это статистическая сумма,
+$\hbar$ и $k$ это постоянные Планка и Больцмана соответственно,
+$\omega_0$ это Ларморовская частота, 
+$T$ - это температура
+и $I_z$ - это оператор проекции полного углового момента на ось~$z$,
+которая направлена вдоль сильного внешнего магнитного поля. 
 
 
-Following the preparation, evolution, and mixing periods of the MQ NMR experiments and taking into account the phase increment $\phi$ of the radio-frequency pulses~\cite{10}, the resulting signal $G(\tau,\phi)$ stored as population information is
+Объединяя подготовительный период, период эволюции и период смешивания, 
+а также взяв во внимание инкремент фазы $\phi$ радиочастотных импульсов~\cite{10}, 
+результирующий сигнал $G(\tau,\phi)$ хранится в виде информации о населенности
 %
 \begin{equation} \label{eq:4}
 	\begin{split}
@@ -246,96 +249,97 @@ Following the preparation, evolution, and mixing periods of the MQ NMR experimen
 	\end{split}
 \end{equation}
 %
-where
+где
 %
 \begin{equation} \label{eq:5}
 	\rho_\mathrm{pre}(\tau,\beta) = e^{-iH_{MQ}\tau}\rho_\mathrm{eq}e^{iH_{MQ}\tau}
 \end{equation}
 %
-is the density matrix at the end of the preparation period.
-The density matrix can be obtained from~Eqs.~(\ref{eq:2},\ref{eq:3}) and $\beta = \frac{\hbar \omega_0}{kT}$.
+это матрица плотности в конце подготовительного периода. 
+Матрица плотности может быть получена из Ур.~(\ref{eq:2},\ref{eq:3}) и $\beta = \frac{\hbar \omega_0}{kT}$.
 
 
-It is convenient to expand the density matrix $\rho_\mathrm{pre}(\tau, \beta)$ in series as~\cite{21}
+Удобно представить матрицу плотности~$\rho_\mathrm{pre}(\tau, \beta)$ в виде ряда~\cite{21}
 \begin{equation}
     \label{eq:6}
         \rho_\mathrm{pre}(\tau,\beta) = \sum_n \rho_{\mathrm{pre},n}(\tau,\beta),
 \end{equation}
-where $\rho_{\mathrm{pre}, n}(\tau,\beta)$ is the contribution to the density matrix $\rho_\mathrm{pre}(\tau,\beta)$ from the MQ coherence of the n--th order.
-Then the resulting signal $G(\tau,\phi)$ of the MQ NMR~\cite{10} can be rewritten as
+где $\rho_{\mathrm{pre}, n}(\tau,\beta)$ это вклад МК когерентности n--ого порядка в матрицу плотности $\rho_\mathrm{pre}(\tau,\beta)$.  
+Тогда результирующий сигнал~$G(\tau,\phi)$ МК ЯМР~\cite{10} можно переписать в виде 
 \begin{equation} \label{eq:7}
     G(\tau, \phi) = \sum_n e^{in\phi}
         Tr\left\{\rho_{\mathrm{pre},n}(\tau,\beta)
         \rho_{\mathrm{pre},-n}(\tau,\beta) \right\},
 \end{equation}
-where we took into account that
+где мы берем во внимание, что 
 \begin{equation}
     \label{eq:8}
         [I_z, \rho_{\mathrm{pre},n}] = n \rho_{\mathrm{pre},n}
 \end{equation}
-The normalized intensities of the MQ NMR coherences can be determined as follows
+Нормализованные интенсивности МК когерентностей ЯМР могут быть определены как
 \begin{equation}
     \label{eq:9}
         J_n(\tau,\beta)= \frac{Tr\left\{\rho_{\mathrm{pre},n}(\tau,\beta)
             \rho_{\mathrm{pre},-n}(\tau,\beta)\right\}}
                 {Tr(\rho^2_\mathrm{eq})}
 \end{equation}
-As was shown in~\cite{8},
+Как было паказано в~\cite{8},
 \begin{equation}
     \label{eq:10}
         Tr(\rho_\mathrm{eq}^2) = \frac{2^N ch^N (\beta)}{Z^2},
 \end{equation}
-where $N$ is the number of the spins.
-It was also shown that
+где $N$ это число спинов в спиновой системе. 
+Также было показано, что 
 \begin{equation}
     \label{eq:11}
         \sum_n J_n(\tau,\beta) = 1
 \end{equation}
-The second moment (dispersion) $M_2(\tau,\beta)$ of the distribution of the MQ NMR coherences $J_n (\tau,\beta)$ can be calculated from Eq.~(\ref{eq:7}) according to~\cite{22}
+Второй момент (дисперсия) $M_2(\tau,\beta)$ распределения интенсивностей МК когерентностей ЯМР  $J_n (\tau,\beta)$ может быть вычислен из Ур.~(\ref{eq:7}) согласно~\cite{22}.  
 \begin{equation}
     \label{eq:12}
         M_2(\tau,\beta) = -\frac{1}{G(\tau, \beta)}
             \frac{d^2 G(\tau + t,\beta)}{dt^2}\bigg|
         _{t=0}
 \end{equation}
-Using Eqs.~(\ref{eq:7},\ref{eq:8},\ref{eq:12}) one can obtain
+Используя Ур.~(\ref{eq:7},\ref{eq:8},\ref{eq:12}) можно получить
 \begin{equation}
     \label{eq:13}
         M_2 (\tau,\beta) = \sum_n n^2 J_n(\tau,\beta)
 \end{equation}
-A lower bound on the quantum Fisher information coincides with the double second moment of Eq.~(\ref{eq:13})~\cite{7,9}.
-As a result, the analysis of the temperature dependence of the second moment $M_2(\tau,\beta)$ of the distribution of the intensities of the MQ NMR coherences allows us to obtain the number of the entangled spins at different temperatures~\cite{8}.
-In the following~Sec.~\ref{sec:3} we demonstrate that the Wigner--Yananse skew information is also connected with the second moment $M_2(\tau,\beta)$
-and can be useful for the investigation of many-spin entanglement.
+Нижняя граница квантовой информации Фишера совпадает со вторым моментом Eq.~(\ref{eq:13})~\cite{7,9}.
+В результате анализ температурной зависимости второго момента $M_2(\tau,\beta)$ распределения интенсивностей МК когерентностей ЯМР позволяет нам получить оценку числа запутанных спинов для разных температур~\cite{8}.
+В следующем разделе~\ref{sec:3} мы продемонстрируем, что косая информация Вигнера--Янасе
+также связана со вторым моментом $M_2(\tau,\beta)$ 
+и может быть полезна для исследования многочастичной запутанности. 
 
-\section{The Wigner--Yanase skew information and MQ NMR}
+\section{Косая информация Вигнера--Янасе и МК ЯМР}
 \label{sec:3}
-The Wigner--Yanase skew information is defined as~\cite{1,2,3,4}
+Косая информация Вигнера--Янасе определяется как~\cite{1,2,3,4} 
 \begin{equation}
     \label{eq:14}
         I_{WY}(\rho(\tau,\beta),I_z) = -\frac{1}{2}
             Tr([\sqrt{\rho(\tau,\beta)},\sigma_z])^2 =
                 -2Tr([\sqrt{\rho(\tau,\beta)},I_z])^2,
 \end{equation}
-where the Pauli operator $\sigma_z=2I_z$.
-Introducing the evolution operator
+где~$\sigma_z=2I_z$~оператор Паули. 
+Введем оператор эволюции
 \begin{equation}
     \label{eq:15}
         V(\tau) = e^{iH_{MQ}\tau}
 \end{equation}
-and using Eq.~(\ref{eq:3}) one can write the density matrix $\rho(\tau,\beta)$ as follows:
+и, используя Ур.~(\ref{eq:3}), можем записать матрицу плотности $\rho(\tau,\beta)$ как:
 \begin{equation}
     \label{eq:16}
         \rho(\tau,\beta) = V^+(\tau) \frac{e^{\beta I_z}}{Z}V(\tau)
 \end{equation}
-Now we use the evident relationship:
+Теперь мы используем очевидное соотношение:
 \begin{equation}
     \label{eq:17}
         \sqrt{\rho(\tau,\beta)} =
             \sqrt{V^+(\tau)\frac{e^{\beta I_z}}{Z}V(\tau)} =
                 V^+(\tau) \frac{e^{\frac{\beta}{2}I_z}}{\sqrt{Z}}V(\tau).
 \end{equation}
-It can be proved by simple calculation:
+Это можно доказать простым вычислением:
 \begin{equation}
     \label{eq:18}
         \sqrt{\rho}\sqrt{\rho} =
@@ -345,7 +349,7 @@ It can be proved by simple calculation:
         \rho(\tau,\beta)
 \end{equation}
 %
-Then we have
+Теперь мы получаем
 %
 \begin{equation} \label{eq:19}
     \left[I_z,\sqrt{\rho(\tau,\beta)}\right]
@@ -353,7 +357,7 @@ Then we have
     = \sum_k k\rho_k \left(\tau, \frac{\beta}{2}\right),
 \end{equation}
 %
-and
+и
 %
 \begin{equation} \label{eq:20}
 	Tr\left[I_z,\sqrt{\rho(\tau,\beta)} \right]^2
@@ -364,7 +368,7 @@ and
 	= \sum_k k^2 J_k\left(\tau,\frac{\beta}{2}\right).
 \end{equation}
 %
-Finally, one can obtain that
+В итоге мы получаем, что
 %
 \begin{equation} \label{eq:21}
     I_{WY}\left(\rho(\tau, \beta), I_z\right)
@@ -372,23 +376,25 @@ Finally, one can obtain that
     = 2M_2\left(\tau, \frac{\beta}{2}\right)
 \end{equation}
 %
-Thus, we obtain an important observation.
-If the spin system is investigated with MQ NMR at the temperature $T\sim\beta^{-1}$ then the Wigner--Yanase skew information equals to the double second moment of the distribution of the intensities of the MQ NMR coherences at the temperature $2T \sim 2\beta^{-1}$ at any time during the spin evolution.
+Таким образом мы получили важное наблюдение.
+Если спиновая система исследуется с помощью МК ЯМР при температуре $T\sim\beta^{-1}$
+тогда косая информация Вигнера--Янасе равна второму моменту распределения интенсивности МК когерентностей ЯМР при температуре $2T \sim 2\beta^{-1}$ для любого времени эволюции. 
 
 
-The Wigner-Yanase skew information is connected with the second moment of the distribution of the MQ NMR coherences analogously to the Fisher information.
-We compare these informations in the following Section~\ref{sec:4}.
+Косая информация Вигнера--Янасе связана со вторым моментом распределения интенсивности МК когерентностей ЯМР так же как и информация Фишера.
+Сравнение оценок многочастичной запутанности на основе этих информаций приведено в следующей секции~\ref{sec:4}. 
 
 
-\section{The comparison of the many-spin entanglement obtained with the Wigner--Yanase information and the Fisher information}
+
+\section{Сравнение оценок многочастичной запутанности, полученной с помощью косой информации Вигнера--Янасе и информации Фишера}
 \label{sec:4}
 
 \begin{figure}
 	\includegraphics[width=0.95\linewidth]{nanopora_entangled_spins_by_temp}
 	\caption{
-		The dependence of the number of the entangled spins on the inverse temperature $\beta = \frac{\pi \omega_0}{kT}$;
-		black circles - the results are obtained with the Fisher information;
-		open circles - the results are obtained with the Wigner--Yanase information.
+	    Зависимость $N_\mathrm{ent}$ оценки снизу для числа запутанных спинов от обратной температуры $\beta = \frac{\pi \omega_0}{kT}$ для системы эквивалентных спинов;
+	    черные точки --- результаты полученные из информации Фишера;
+	    белые точки --- результаты полученные из косой информации Вигнера--Янасе;
 	}
 	\label{fig:2}
 \end{figure}
@@ -396,20 +402,23 @@ We compare these informations in the following Section~\ref{sec:4}.
 \begin{figure}
 	\includegraphics[width=0.95\linewidth]{zigzag_entangled_spins_by_temp}
 	\caption{
-		The dependence of the number $N_\mathrm{ent}$ of the entangled spins on the parameter $\beta$ (the inverse temperature) for zigzag chains consisting of six spins.
+	    Зависимость $N_\mathrm{ent}$ оценки снизу для числа запутанных спинов от обратной температуры $\beta = \frac{\pi \omega_0}{kT}$ для альтерированной  цепочки;
+	    черные точки --- результаты полученные из информации Фишера;
+	    белые точки --- результаты полученные из косой информации Вигнера--Янасе;
 	}
 	\label{fig:3}
 \end{figure}
 
-The Wigner--Yanase skew information $I_{WY}(\rho(\tau,\beta),I_z)$ and the Fisher information $I_F(\rho(\tau,\beta),I_z)$ can be used for the investigation of the many-spin entanglement.
-Indeed, it is known~\cite{5,6} that if
+Косая информация Фишера  $I_{WY}(\rho(\tau,\beta),I_z)$ и информация Фишера $I_F(\rho(\tau,\beta),I_z)$
+могут быть использованы для исследования многочастичной запутанности. 
+Известно~\cite{5,6}, что если
 $I_{WY}\left( \rho(\tau, \beta), I_z \right)$
-or
+или
 $I_{F}\left( \rho(\tau, \beta), I_z \right)$
-exceeds $mk^2 + (N - mk)^2$,
-where $k, m$ are integer and $m$ is the integer part of $N/k$,
-then we have $N_\mathrm{ent} = (k + 1) $~--~particle entangled spins in the system.
-The informations are connected by the following restriction~\cite{3}
+превышает $mk^2 + (N - mk)^2$,
+где $k, m$ целые, а $m$ это целая часть от $N/k$,
+тогда состояние содержит несепарабельную подсистему с $N_\mathrm{ent} = (k + 1) $ частицами. 
+Информации связанны следующим неравенством~\cite{3}:
 %
 \begin{equation} \label{eq:22}
     I_{WY}\left(\rho(\tau,\beta), I_z\right)
@@ -417,33 +426,30 @@ The informations are connected by the following restriction~\cite{3}
     \leq 2I_{WY}\left(\rho(\tau,\beta), I_z\right).
 \end{equation}
 %
-The restrictions (22) allow us to hope that the obtained results for the number of the entangled spins are not very different.
-For the comparison we used the model~\cite{23} of a nonspherical nanopore filled with a gas of spin-carrying atoms (for example, xenon) or molecules in a strong external magnetic field.
-This model allows the investigation of the many-spin entanglement in the spin system consisting of hundreds of nuclear spins~\cite{8}.
+Данное неравенство~(\ref{eq:22}) позволяет нам надеяться, что результаты для оценки количества запутанных спинов не будут значительно отличаться. 
+Для сравнения мы используем модель~\cite{23} несферической нанопоры, заполненной газом спин несущих атомов (например, ксенон) или молекул в сильном внешнем магнитном поле. 
+Эта модель позволяет исследовать многочастичную запутанность в спиновой системе, состоящей из сотни ядерных спинов~\cite{8}. 
 
 
-We investigated many-spin entanglement in the spin system, consisting of 201 spins, in a nanopore both with
-the Wigner--Yanase information $I_{WY}\left(\rho(\tau, \beta), I_z\right)$
-and the Fisher information $I_F\left(\rho(\tau,\beta),I_z\right)$.
-In Fig.~\ref{fig:2} the dependence of the number of the entangled spins on the inverse temperature is presented.
-Fig.~\ref{fig:2} demonstrates that the number of the entangled spins increases when the temperature decreases both for the Wigner--Yanase information and the Fisher information.
+Мы исследуем многочастичную запутанность в спиновой системе, состоящую из 201 спина
+в нанопоре. На Рис.~\ref{fig:2} изображена зависимость $N_\mathrm{ent}$ оценки снизу для числа запутанных спинов от обратной температуры. Число запутанных спинов растет с понижением температуры для обеих информаций. 
+
+Также по аналогии было проведено исследование модели альтерированной цепочки протонов в монокристалле гамбергита~\cite{16,24}.
+На Рис.~\ref{fig:3} изображен схожее поведение многочастичной запутанности для цепочки из 6 спинов для обеих информаций. 
 
 
-An analogous investigation was conducted on the model of the proton zigzag chain in a single crystal of hambergite~\cite{16,24}.
-In Fig.~\ref{fig:3},  similar results on many--spin entanglement are presented for the system consisting of six spins at different temperatures for both used informations.
-
-
-\section{Conclusion}
+\section{Выводы}
 \label{sec:5}
 
-We studied the connection of the Wigner--Yanase skew information with the second moment of the distribution of the intensities of MQ coherences in the MQ NMR experiment.
-It was shown that the Wigner--Yanase skew information at the temperature $T \sim \beta^{-1}$ equals the double second momentum of the MQ NMR spectrum at the temperature $2T \sim 2\beta^{-1}$.
-We compare also the results on the many--spin entanglement obtained with the Wigner--Yanase skew information and the Fisher information.
+Мы изучили связь косой информации Вигнера--Янасе со вторым моментом распределения интенсивностей МК когерентностей ЯМР в МК эксперименте ЯМР. 
+Было параказно, что косая информация Вигнера--Янасе при температуре $T \sim \beta^{-1}$ равна 
+удвоенному второму моменту МК ЯМР спектра при температуре $2T \sim 2\beta^{-1}$.
+Было проведено сравнение оценок количества запутанных спинов полученных с помощью косой информации Вигнера--Янасе и информации Фишера.
 
 
 \section{Acknowledgement}
 \label{sec:6}
-We acknowledge funding from the Ministry of Science and Higher Education of the Russian Federation (Grant No.~075-15-2020-779).
+Мы благодарим фонд Министерства науки и высшего образования РФ (Grant No.~075-15-2020-779)
 
 
 
